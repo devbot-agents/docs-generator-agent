@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: docs-generator-agent
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    repo: https://github.com/devbot-agents/docs-generator-agent.git
+    branch: main
+    plan: free
