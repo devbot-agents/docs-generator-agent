@@ -1,0 +1,20 @@
+{
+  "type": "exemplo_type",
+  "properties": {
+    "name": {
+      "type": "exemplo_type"
+    },
+    "description": {
+      "type": "exemplo_type"
+    },
+    "input_schema": {
+      "type": "exemplo_type"
+    },
+    "output_schema": {
+      "type": "exemplo_type"
+    },
+    "endpoint_url": {
+      "type": "exemplo_type"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "exemplo_type",
+  "properties": {
+    "readme": {
+      "type": "exemplo_type"
+    },
+    "swagger": {
+      "type": "exemplo_type"
+    },
+    "examples": {
+      "type": "exemplo_type"
+    },
+    "agent_json": {
+      "type": "exemplo_type"
+    }
+  }
+}

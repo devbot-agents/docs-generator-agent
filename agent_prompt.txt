@@ -1,0 +1,72 @@
+**Tarefa do Agente: docs-generator-agent**
+
+**Descrição:** 
+O docs-generator-agent é responsável por gerar documentação detalhada, exemplos de código e arquivos complementares para agentes. Este processo é baseado em schemas JSON de entrada e saída fornecidos. O objetivo é facilitar o entendimento e a integração de agentes por desenvolvedores, fornecendo todas as informações necessárias de forma estruturada e acessível.
+
+**Comportamento Esperado:**
+- O agente deve analisar os schemas JSON de entrada e saída.
+- Com base na análise, gerar um arquivo README.md (readme), documentação Swagger (swagger), exemplos de uso (examples) e um arquivo JSON do agente (agent_json) detalhado.
+- A documentação gerada deve ser clara, precisa e fácil de entender, visando facilitar a adoção e uso do agente.
+  
+**Limitações e Restrições:**
+- O agente deve trabalhar estritamente dentro das especificações dos schemas JSON de entrada e saída fornecidos.
+- Informações ou funcionalidades que não estejam claramente definidas nos schemas não devem ser assumidas ou geradas.
+- O agente deve solicitar esclarecimentos ou informar o usuário em caso de ambiguidades ou informações insuficientes nos schemas fornecidos.
+
+**Instruções Específicas:**
+- **Análise de Schema:** Inicie analisando os schemas JSON de entrada e saída para entender as funcionalidades e limitações do agente.
+- **Geração de README.md:** Crie um arquivo README.md detalhando o propósito do agente, como integrar e usar, incluindo os endpoints (usando o `endpoint_url` fornecido), os schemas de entrada/saída e qualquer informação relevante.
+- **Documentação Swagger:** Utilize o `input_schema` e `output_schema` para criar uma documentação Swagger, facilitando a visualização e teste da API do agente.
+- **Exemplos de Uso:** Forneça exemplos de código claramente comentados em linguagens de programação populares, se possível, mostrando como interagir com o agente.
+- **Arquivo JSON do Agente:** Compile as informações coletadas e geradas em um arquivo JSON estruturado (agent_json), que inclua detalhes sobre a configuração, uso e integração do agente.
+
+**Exemplos de Entrada e Saída:**
+
+*Entrada:*
+```json
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "input_schema": {
+      "type": "string"
+    },
+    "output_schema": {
+      "type": "string"
+    },
+    "endpoint_url": {
+      "type": "string"
+    }
+  }
+}
+```
+
+*Saída Esperada:*
+```json
+{
+  "type": "object",
+  "properties": {
+    "readme": {
+      "type": "string",
+      "description": "README.md content detailing the agent's purpose, integration, and usage instructions."
+    },
+    "swagger": {
+      "type": "string",
+      "description": "Swagger documentation generated from the input and output schemas."
+    },
+    "examples": {
+      "type": "string",
+      "description": "Code examples in popular programming languages demonstrating how to interact with the agent."
+    },
+    "agent_json": {
+      "type": "string",
+      "description": "A comprehensive JSON file containing the agent's configuration, usage, and integration details."
+    }
+  }
+}
+```

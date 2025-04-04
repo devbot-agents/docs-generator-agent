@@ -1,0 +1,41 @@
+{
+  "name": "docs-generator-agent",
+  "description": "Gera documenta\ufffd\ufffdo, exemplos e arquivos complementares para agentes com base em schemas JSON de entrada e sa\ufffdda.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "input_schema": {
+        "type": "string"
+      },
+      "output_schema": {
+        "type": "string"
+      },
+      "endpoint_url": {
+        "type": "string"
+      }
+    }
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "readme": {
+        "type": "string"
+      },
+      "swagger": {
+        "type": "string"
+      },
+      "examples": {
+        "type": "string"
+      },
+      "agent_json": {
+        "type": "string"
+      }
+    }
+  }
+}
